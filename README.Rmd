@@ -5,6 +5,7 @@
 
 
 ### Objective
+Utilize dimension reduction techniques to analyze data related to Buruli ulcer.
 
 ### Specific Aims
 1.  Utilize GitHub to collaborate on project materials and updates.
