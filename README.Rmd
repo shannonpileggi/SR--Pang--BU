@@ -9,3 +9,14 @@
 ### Specific Aims
 1.  Utilize GitHub to collaborate on project materials and updates.
 2.  Write all R code according to Hadley Wickam's Style Guide (http://adv-r.had.co.nz/Style.html).  All R code should be written in a reproducible manner, such that code will execute when applied to a new data set. 
+3.  Literature review  
++  Read Merritt et al 2005, Merritt et al 2010 and Pileggi et al 2017 for background information on Buruli ulcer.
++  Read Wagner, Cambpell, and Wu for other examples of of landscape and spatial analysis related to Buruli ulcer.  
++  Summarize techniques and approaches to analysis Buruli ulcer, with special attention to any dimension reduction techniques like PCA.  Identify other similar papers.
+4.  Take the "Unsupervised Learning in R" course through DataCamp (https://www.datacamp.com/courses/unsupervised-learning-in-r) and read more about Principle Components Analysis at Explained Visually (http://setosa.io/ev/principal-component-analysis/)
+5.  Apply PCA or other appropriate dimensionality reduction techniques to two data sets regarding Buruli ulcer.  
++  Point level data:  This data set contains information on 98 water sites in Ghana tested for Mycobacterium ulcerans (corresponds to the Pileggi 2017 paper).  Utilize PCA on the water variables and land cover land use variables.
++  Regional data:  This is data summarized at the regional level for the cases of Buruli ulcer.  Utilize PCA on the land use/land cover variables.
+6.  Utilize the results of PCA to create models for association or prediction of Buruli ulcer cases or MU positive.
+7.  Provide a through write up / discussion of results.
+8.  Take initiative at any point to recommend other directions for analysis.
