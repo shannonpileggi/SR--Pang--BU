@@ -22,4 +22,6 @@ Utilize dimension reduction techniques to analyze data related to Buruli ulcer.
 7.  Provide a through write up / discussion of results.
 8.  Take initiative at any point to recommend other directions for analysis.
 
-this is my new aim
+
+
+
