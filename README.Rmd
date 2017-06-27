@@ -14,7 +14,7 @@ Utilize dimension reduction techniques to analyze data related to Buruli ulcer.
 +  Read Merritt et al 2005, Merritt et al 2010 and Pileggi et al 2017 for background information on Buruli ulcer.
 +  Read Wagner, Cambpell, and Wu for other examples of of landscape and spatial analysis related to Buruli ulcer.  
 +  Summarize techniques and approaches to analysis Buruli ulcer, with special attention to any dimension reduction techniques like PCA.  Identify other similar papers.
-4.  Take the "Unsupervised Learning in R" course through DataCamp (https://www.datacamp.com/courses/unsupervised-learning-in-r) and the "Introduction to Machine Learning" course through DataCamp (https://www.datacamp.com/courses/introduction-to-machine-learning-with-r).
+4.  Take the "Unsupervised Learning in R" course through DataCamp (https://www.datacamp.com/courses/unsupervised-learning-in-r) and the "Introduction to Machine Learning" course through DataCamp (https://www.datacamp.com/courses/introduction-to-machine-learning-with-r).  Recommended Data Camp course for enhancing R programming:  "Writing Functions in R" (https://www.datacamp.com/courses/writing-functions-in-r)
 5.  Other sites that might be useful for reading about PCA include:
 +   Explained Visually (http://setosa.io/ev/principal-component-analysis/)
 +   http://strata.uga.edu/8370/lecturenotes/principalComponents.html
