@@ -1,0 +1,19 @@
+---
+title: "Get started with data"
+author: "Shannon Pileggi"
+date: "June 27, 2017"
+output: html_document
+---
+
+```{r}
+#getwd() identifies the working directory associated with this Git Hub project
+
+#file.path() creates a file path name that concatenates the working directory with the sub folder for the data, and also automatically adjusts the direction of slashes for your operating system
+dir <- file.path(getwd(),"Point level data")
+
+#Now we append the name of the data set to the directory
+out <- read.csv(file.path(dir, "MU-BU-Ghana.csv"))
+
+summary(out)
+```
+

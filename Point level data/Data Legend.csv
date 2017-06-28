@@ -1,0 +1,86 @@
+USITEID,"Unique site Identification number, the S stand for a survey site, the next number for the year, and the final number is the running count of sites samples"
+DISTRICT,District the site is loacted within
+COMMUNITY,Community the site is located within
+Year,Year the site sampled
+REGION,Region the site is located within
+LAT_N_,Latitude (N) - Recorded on ground
+LONG_W_,Longitude (W)-Recorded on ground
+ENDEM_DIST,"if community sampled is located within an endemic district (1=yes, 0=no)"
+Endemism__04_07_,"if community sampled reported BU cases 2004-2007 (1=yes, 0=no)"
+Total_MU_Present__VNTR_,Presence (1) or absence (0) of MU VNTR among all filters and plants
+USWBTYPE,The waterbody type later classified in the US
+WBFLOW,"Waterbody flow, either lentic or lotic"
+HUMAN,Human influence or natural
+elevation,Elevation
+Dist_To_Ocean_km_,Distance of Site to the ocean (km)
+Aspect,Aspect of the Site
+Dir,Direction of Slope for the Site
+Dir_Class,Direction Clas of the Site
+Wet_0_1km_AVG,Wetness Index 0.1km buffer Average
+Wet_0_1km_STD,Wetness Index 0.1km buffer Standard Deviation
+Wet_0_5km_AVG,Wetness Index 0.5km buffer Average
+Wet_0_5km_STD,Wetness Index 0.5km buffer Standard Deviation
+Wet_1km_AVG,Wetness Index 1km buffer Average
+Wet_1km_STD,Wetness Index 1km buffer Standard Deviation
+Wet_5km_AVG,Wetness Index 5km buffer Average
+Wet_5km_STD,Wetness Index 5km buffer Standard Deviation
+Water_100m,% Water from LULC classification with 0.1km buffer
+Water_500m,% Water from LULC classification with 0.5km buffer
+Water_1km,% Water from LULC classification with 1.0km buffer
+Water_5km,"% Water from LULC classification with 5,0km buffer"
+Water_10km,% Water from LULC classification with 10.0km buffer
+Wetlands_100m,% Wetlands from LULC classification with 0.1km buffer
+Wetlands_500m,% Wetlands from LULC classification with 0.5km buffer
+Wetlands_1km,% Wetlands from LULC classification with 1.0km buffer
+Wetlands_5km,"% Wetlands from LULC classification with 5,0km buffer"
+Wetlands_10km,% Wetlands from LULC classification with 10.0km buffer
+Forest_100m,% Forest from LULC classification with 0.1km buffer
+Forest_500m,% Forest from LULC classification with 0.5km buffer
+Forest_1km,% Forest from LULC classification with 1.0km buffer
+Forest_5km,"% Forest from LULC classification with 5,0km buffer"
+Forest_10km,% Forest from LULC classification with 10.0km buffer
+Cropland_100m,% Cropland from LULC classification with 0.1km buffer
+Cropland_500m,% Cropland from LULC classification with 0.5km buffer
+Cropland_1km,% Cropland from LULC classification with 1.0km buffer
+Cropland_5km,"% Cropland from LULC classification with 5,0km buffer"
+Cropland_10km,% Cropland from LULC classification with 10.0km buffer
+Shrubland_100m,% Shrubland from LULC classification with 0.1km buffer
+Shrubland_500m,% Shrubland from LULC classification with 0.5km buffer
+Shrubland_1km,% Shrubland from LULC classification with 1.0km buffer
+Shrubland_5km,"% Shrubland from LULC classification with 5,0km buffer"
+Shrubland_10km,% Shrubland from LULC classification with 10.0km buffer
+Urban_100m,% Urban from LULC classification with 0.1km buffer
+Urban_500m,% Urban from LULC classification with 0.5km buffer
+Urban_1km,% Urban from LULC classification with 1.0km buffer
+Urban_5km,"% Urban from LULC classification with 5,0km buffer"
+Urban_10km,% Urban from LULC classification with 10.0km buffer
+calcium,Calcium (mg/L)
+calcium_hardness,Calcium hardness as CaCO3 (mg/l)
+carbon_trioxide,Carbon trioxide (mg/L)
+chlorine,Chlorine (mg/L)
+chlorophyll,Chlorophyll (mg/L)
+color,Color apparent (Hz)
+dis_ox,Dissolved oxygen percent saturation 
+cond,Field specific conductivity (?S/cm)
+temp,Field temperature (Celcius) 
+fturb,Field turbidity (NTU)
+iron,Iron (mg/L)
+magn,Magnesium (mg/L)
+manganese,Manganese (mg/L)
+nitrate,Nitrate (mg/L)
+nitdiox,Nitrogen dioxide (mg/L)
+nitphos,Nitrogen/phosphate ratio
+oxred,Oxidation-reduction potential
+ph,pH
+phosphate,Phosphate (mg/L)
+sulfate,Sulfate (mg/L)
+sussol,Suspended solids (mg/L)
+totalk,Total alkalinity as CaCO3 (mg/l)
+totds,Total dissolved solids (mg/L)
+totnit,Total nitrogen
+,
+,
+,
+,
+,
+,
