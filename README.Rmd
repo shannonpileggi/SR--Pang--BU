@@ -23,7 +23,7 @@ Utilize dimension reduction techniques to analyze data related to Buruli ulcer.
 8.  Take initiative at any point to recommend other directions for analysis.
 
 
-testing git
+9. testing git
 
 
 

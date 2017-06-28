@@ -1,0 +1,26 @@
+---
+title: 'Data Camp Chapter 1: Unsupervised Learning Notes'
+author: "Corey Pang"
+date: "6/28/2017"
+output: html_document
+---
+
+### _Unsupervised Learning_
++ Finding patterns in data without making predictions
++ Finding structure in unlabeled data
+
+#### _Goals_
++ Find homogeneous subgroups within a population, called clustering
++ Segmenting a market of consumers
++ Finding movies most like another movie
++ Finding patterns in the features of the data
+### _Dimensionality Reduction_
+
+#### _Goal_
++ Visually represent high D data while maintaining much of the data variability
++ Pre-processing step for supervised learning
++ Generally no goal of the analysis
+### _Supervised Learning_
++ Making predictions based on labeled data
++ Predictions like regression or classification
++ Labeled vs Unlabeled?
