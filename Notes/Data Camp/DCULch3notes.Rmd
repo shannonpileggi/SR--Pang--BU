@@ -1,0 +1,34 @@
+---
+title: "DCULch3notes"
+author: "Corey Pang"
+output: html_document
+---
+### Introduction to PCA
+
+##### Dimensionality Reduction
+    1. Find Structure in features 
+    2. Aid in Visualization
+    
+* PCA is a type of Dimensionality Reduction
+* Goals of PCA:
+    1. Find linear combinations of variables to create principal components 
+    2. Maintain most variance in data
+    3. Prinicipal Components are uncorrelated(orthogonal)
+    
+* In R:pr.data <- __prcomp(x = data, scale = TRUE/FALSE, center = TRUE)
+
+##### Visualizations
+* __Biplots__: biplot(pr.data)
+* __Screeplots__: pr.var <- pr.data$sdev^2, pve(proportion of variance) <- pr.var/sum(pr.var), and then plot(pve)
+    * plot(cumsum(pve)) and then look for elbow to determine the number of principal components
+    
+#### Practical Issues with PCA
+1. Scaling the data
+    * It is very important to scale because otherwise the variables with the most variability will only be due to the units of measurement.
+2. Missing values in the data set
+    * drop the observations with missing values
+    * Impute/estimate the missing values
+3. Categorical Data
+    * Do not include those variables 
+    * Encode those data features as numerical
+    
