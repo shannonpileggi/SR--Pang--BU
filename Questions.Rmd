@@ -1,0 +1,12 @@
+---
+title: "Questions for 6/29 Meeting"
+author: "Corey Pang"
+date: "6/29/2017"
+output: html_document
+---
+
+1. LU/LC variable
+2. It says that BU is now present in the Volta region? Has the been explored to look for differences between when there were no reported cases to now when there are reported cases?
+3. Relationship between Mycobacterium Ulcerans and Buruli Ucler? MU causes BU?
+4. When we are comparing the different methods (Hierarchacal to Diagnosis) what does the table show? 
+5. In one of the articles, I read that missing data was estimated to fill that in? What are the positives and negatives of this process? When would you want to do this vs. just throwing the observations with missing data points out?
