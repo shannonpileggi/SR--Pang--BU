@@ -29,5 +29,9 @@ plot(pve, xlab = "Principal Component",
 plot(cumsum(pve), xlab = "Principal Component",
               ylab = "Cumulative Proportion of Variance Explained",
               type = "b")
+biplot(pr.data)
+ggbiplot(pr.data, obs.scale = 1, var.scale = 1,
+              ellipse = TRUE, 
+              circle = TRUE)
 ```
 
