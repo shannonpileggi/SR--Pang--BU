@@ -15,7 +15,7 @@ output: html_document
     2. Maintain most variance in data
     3. Prinicipal Components are uncorrelated(orthogonal)
     
-* In R:pr.data <- __prcomp(x = data, scale = TRUE/FALSE, center = TRUE)
+* In R:pr.data <- prcomp(x = data, scale = TRUE/FALSE, center = TRUE)
 
 ##### Visualizations
 * __Biplots__: biplot(pr.data)
