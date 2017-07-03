@@ -23,6 +23,7 @@ biplot(pr.data)
 plot(pr.data, type='l')
 pr.var <- pr.data$sdev^2
 pve <- pr.var/sum(pr.var)
+plot(pve)
 plot(cumsum(pve))
 ```
 
