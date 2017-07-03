@@ -9,8 +9,6 @@ output: html_document
 getwd()
 dir <- file.path(getwd(),"Point level data")
 out <- read.csv(file.path(dir, "MU-BU-Ghana.csv"))
-summary(out)
-head(out)
 newout <- na.omit(out)
 ```
 
@@ -19,11 +17,17 @@ What is the best way for us to deal with the missing data point? I just omitted 
 ```{r1}
 pr.data <- prcomp(x = newout[,29:80], scale = TRUE, center = TRUE)
 summary(pr.data) 
-biplot(pr.data)
-plot(pr.data, type='l')
 pr.var <- pr.data$sdev^2
 pve <- pr.var/sum(pr.var)
-plot(pve)
-plot(cumsum(pve))
+percent.pve <- pr.var/sum(pr.var) * 100
+barplot(percent.pve, xlab="PC", ylab="Percent Variance", names.arg=1:length(percent.pve), las=1, ylim=c(0,max(percent.pve)), col="gray")
+#Scree Plot
+plot(pve, xlab = "Principal Component",
+             ylab = "Proportion of Variance Explained",
+             type = "b")
+#Cumulative Scree Plot
+plot(cumsum(pve), xlab = "Principal Component",
+              ylab = "Cumulative Proportion of Variance Explained",
+              type = "b")
 ```
 
