@@ -1,0 +1,22 @@
+---
+title: "PCA on Point Level Data"
+author: "Corey Pang"
+date: "7/2/2017"
+output: html_document
+---
+
+```{r}
+getwd()
+dir <- file.path(getwd(),"Point level data")
+out <- read.csv(file.path(dir, "MU-BU-Ghana.csv"))
+summary(out)
+head(out)
+newout <- na.omit(out)
+```
+
+What is the best way for us to deal with the missing data point? I just omitted the observation. 
+
+```{r1}
+pr.data <- prcomp(x = newout[,29:80], scale = TRUE, center = TRUE)
+```
+
