@@ -6,3 +6,10 @@ Date   | Hours | Time        | Description
 6/26/2017 | 1.5 | 2:00-3:30PM | Downloaded Git, started trying to integrate Git with Rstudio. Didn't get them to integrate right. Read some of Meritt 2010.
 6/26/2017 | 1.5 | 8:00-9:30PM | Watched youtube videos on Github. Learned how to use the command line through Terminal to upload to Github. Learned the realtionship between  'commit', 'push', and 'pull'.
 6/27/2017 | 1 | 8:00-9:00AM | Watched more youtube videos on getting Github and Rstudio to integrate and started Data Camp Chapter 1 on k-means clustering while taking notes.
+6/27/2017 | 1 | 11:00AM-12:00PM | Finished DataCamp chapter 1 while taking detailed notes.
+6/28/2017 | 1 | 8:30-9:30AM | Troubleshooting Github and Rstudio integration
+6/28/2017 | 1.5 | 10:30AM-12:00PM | Reading 'Pileggi PLOS ONE 2017' and taking Notes in R Markdown, Looking up formatting in R Markdown.
+6/28/2017 | 1.5 | 2:15PM-3:45PM | Met with Tessa to help each other with Github and Rstudio and made folders to organize Github.
+6/28/2017 | 1 | 7:30PM-8:30PM | Worked on Data Camp: Unsupervised Learning Chapter 2 and took notes.
+6/28/2017 | 2.5 | 9:30PM-12:00AM | Finished DataCamp: Unsupervised Learning and took notes. 
+7/2/2017 | 1 | 5:00PM-6:00PM | Created hours table in R Markdown and transferred all information from the previous Excel files. 
