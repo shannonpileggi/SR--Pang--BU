@@ -1,5 +1,8 @@
----
-title: "Hours"
-author: "Corey Pang"
----
+> Summer Research Hours Log
 
+Date   | Hours | Time        | Description
+------ | ----- | ----------- | -----------------------------------------
+6/26/2017 | 1.5 | 8:00-9:30AM | Read through project tasks/goals and signed up for Github and Data Camp. Started reading through some of the literature posted on Github
+6/26/2017 | 1.5 | 2:00-3:30PM | Downloaded Git, started trying to integrate Git with Rstudio. Didn't get them to integrate right. Read some of Meritt 2010.
+6/26/2017 | 1.5 | 8:00-9:30PM | Watched youtube videos on Github. Learned how to use the command line through Terminal to upload to Github. Learned the realtionship between  'commit', 'push', and 'pull'.
+6/27/2017 | 1 | 8:00-9:00AM | Watched more youtube videos on getting Github and Rstudio to integrate and started Data Camp Chapter 1 on k-means clustering while taking notes.
