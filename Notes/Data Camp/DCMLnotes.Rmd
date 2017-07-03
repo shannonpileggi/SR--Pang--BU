@@ -1,0 +1,21 @@
+---
+title: 'Data Camp: Machine Learning Notes'
+author: "Corey Pang"
+date: "6/30/2017"
+---
+
+#### Machine Learning
+* Machine learning focuses on the development of computer programs that can change when exposed to new data. Construct/use algorithms that learn from data.
+* Goal: Building an algorithm to predict the outcome
+
+##### Common Machine Learning Topics
+1. Classification
+    * Predict category(Qualitative Response) of a new observation 
+2. Regression
+    * Estimating an actual value and not just category 
+3. Clustering 
+    * Grouping objects in clusters
+        * Similar within each cluster
+        * Dissimilar between classes
+        
+        
