@@ -18,5 +18,11 @@ What is the best way for us to deal with the missing data point? I just omitted 
 
 ```{r1}
 pr.data <- prcomp(x = newout[,29:80], scale = TRUE, center = TRUE)
+summary(pr.data) 
+biplot(pr.data)
+plot(pr.data, type='l')
+pr.var <- pr.data$sdev^2
+pve <- pr.var/sum(pr.var)
+plot(cumsum(pve))
 ```
 
