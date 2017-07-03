@@ -18,4 +18,17 @@ date: "6/30/2017"
         * Similar within each cluster
         * Dissimilar between classes
         
-        
+#### Supervised Learning
+    * Find a function, f, which can be used to assign a class or value to unseen observations
+    * Given a set of labeled observations
+    
+#### Unsupervised Learning
+    * Does not require labeled data 
+    
+#### Semi-Supervised Learning
+    * Some of the data is labeled
+    * A lot of the data is unlabeled 
+    * Use clustering to group together the similar obervations
+    * Using clustering information and classes of labeled observations to assign a class to unlabeled observations
+    * This gives you more labeled data to perform supervised learning
+    
