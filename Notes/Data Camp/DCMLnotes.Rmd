@@ -65,5 +65,55 @@ train_indices <- 1:round(0.7 * n)
 train <- shuffled_df[train_indices, ]
 test_indices <- (round(0.7 * n) + 1):n
 test <- shuffled_df[test_indices, ]
-            
-    
+
+#### Bias and Variance 
+* There are two type of error:
+    1. Irreducible error 
+        * Should not be minimized, noise
+    2. Reducible error
+        * The lower this, the better our learning algorithm 
+        1. __Bias:__ due to wrong assumptions made
+            * Difference between the algorithm and the truth
+            * More restrictions lead to higher Bias
+        2. __Variance:__ Error due to the sampling of the training set
+            * Model with high variance fits the training set closely, which generalizes bad to the test set 
+        
+    * Bias Variance Trade-off
+        * Inverse relationship between Bias and Variance 
+    * Overfitting
+        * Accuracy will depend on the data set split 
+        * High variance will depend heavily on the data set split 
+        * Overfitting=Model fits the training set better than the test set 
+        * Model is too specific
+    * Underfitting
+        * Model is restricted too much
+        * Model is too general
+        
+Example Code:
+# Apply spam_classifier to emails_full: pred_full
+pred_full <- spam_classifier(emails_full$avg_capital_seq)
+
+# Build confusion matrix for emails_full: conf_full
+conf_full <- table(emails_full$spam, pred_full)
+
+# Calculate the accuracy with conf_full: acc_full
+acc_full <- sum(diag(conf_full))/sum(conf_full)
+
+### Chapter 2: Classification
+* Classification: Automatically assigns class to observations with features 
+
+##### Information Gain
+* Information gained from split based on feature test 
+* Test leads to nicely divided classes
+    * High information gain
+* Test leads to scrambled classes
+    * Low information gain
+* Tests with high information gain will be chosen
+* The number of nodes influences the chance of overfitting
+* Pruning the tree: Restrict size, higher bias 
+
+
+
+
+
+
