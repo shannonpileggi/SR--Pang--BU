@@ -32,3 +32,38 @@ date: "6/30/2017"
     * Using clustering information and classes of labeled observations to assign a class to unlabeled observations
     * This gives you more labeled data to perform supervised learning
     
+#### Is the model good?
+    1. Accuracy
+        * Accuracy = # correct / total number
+        * Precision = TP / (TP + FP)
+        * Recall = TP / (TP + FN)
+    2. Computation time
+    3. Interpretability
+    
+    For Clustering:
+    * We want the within variability to be low and the between variability to be high.
+        * __Within__ 
+            * Within sum of squares (WSS)
+            * Diameter 
+        * __Between__
+            * Between sum of squares (BSS)
+            * Dunn's Index: minimal intercluster distance / maximal diameter
+Supervised learning: Must be able to predict 
+    * Unseen Observations
+    
+How to split your sets?
+    * Typically 3:1
+    
+* n-fold cross-validation
+    * Fold test over dataset n times
+    * Each test is 1/n size of the total datset
+    
+Splitting the data into train and test sets
+n <- nrow(df)
+shuffled_df <- df[sample(n), ]
+train_indices <- 1:round(0.7 * n)
+train <- shuffled_df[train_indices, ]
+test_indices <- (round(0.7 * n) + 1):n
+test <- shuffled_df[test_indices, ]
+            
+    
