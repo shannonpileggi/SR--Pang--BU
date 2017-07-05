@@ -14,3 +14,8 @@ Date   | Hours | Time        | Description
 6/28/2017 | 2.5 | 9:30PM-12:00AM | Finished DataCamp: Unsupervised Learning and took notes. 
 7/2/2017 | 1 | 5:00PM-6:00PM | Created hours table in R Markdown and transferred all information from the previous Excel files. 
 7/2/2017 | 3 | 6:30PM-9:30PM     | Read 4 links about PCA, started looking at the point level data, and carried out PCA on the data. 
+7/3/2017 | 2 | 2:00PM-4:00PM | Worked on Data Camp Machine Learning and took notes.
+7/5/2017 | 1.5 | 8:30AM-10:00AM | Worked on Data Camp Machine Learning. Finished Chapter 1 and started chapter 2 while taking notes. 
+7/5/2017 | 1.5 | 2:00PM-3:30PM | Worked on Data Camp Machine Learning
+
+>> __Total Hours: 18__
