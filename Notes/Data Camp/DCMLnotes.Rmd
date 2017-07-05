@@ -90,13 +90,13 @@ test <- shuffled_df[test_indices, ]
         * Model is too general
         
 Example Code:
-# Apply spam_classifier to emails_full: pred_full
+##### Apply spam_classifier to emails_full: pred_full
 pred_full <- spam_classifier(emails_full$avg_capital_seq)
 
-# Build confusion matrix for emails_full: conf_full
+##### Build confusion matrix for emails_full: conf_full
 conf_full <- table(emails_full$spam, pred_full)
 
-# Calculate the accuracy with conf_full: acc_full
+##### Calculate the accuracy with conf_full: acc_full
 acc_full <- sum(diag(conf_full))/sum(conf_full)
 
 ### Chapter 2: Classification
@@ -112,8 +112,38 @@ acc_full <- sum(diag(conf_full))/sum(conf_full)
 * The number of nodes influences the chance of overfitting
 * Pruning the tree: Restrict size, higher bias 
 
+#### k-Nearest Neighbors
+* __Instance based learning__
+    * No real model like decision tree
+    * Compares unseen instances to training set
+    * Predict using the comparison of unseen data to the training set 
+    * k-nearest neighbor is an example of instance based learning
+        * Finds the closest observation and assigns the same class
+        * k is the amount of neighbors
+        * Assign class that is most represented in the k neighbors 
+        
+        * Distance Metric
+            1. Euclidean Distance
+            2. Manhatten Distance 
+            * Scaling can be an issue when the units do not match, it will influence the distance
+                * We must normalize all features
+            * For categorical variables: Need to create dummy variables that take either a 1 or 0. 
+##### Droppinga column
+* dropping a column named column in a data frame named df can be done as follows: df$column <- NULL
+##### Normalize Pclass
+min_class <- min(knn_train$Pclass)
+max_class <- max(knn_train$Pclass)
+knn_train$Pclass <- (knn_train$Pclass - min_class) / (max_class - min_class)
+knn_test$Pclass <- (knn_test$Pclass - min_class) / (max_class - min_class)
 
+* Using KNN in R: 
+    * pred <- knn(train = ___, test = ___, cl = ___, k = ___)
 
-
+#### The Rocc Curve (A performance Measure)
+* Very powerful performance measurement 
+* For binary classification
+* Receiver Operator Characteristic Curve (ROC Curve)
+    * True Positive Rate(TPR): TP/(TP+FN)
+    * False Positive Rate(FPR): FP/(FP+TN)
 
 
