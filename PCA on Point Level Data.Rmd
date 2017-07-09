@@ -5,19 +5,18 @@ date: "7/2/2017"
 output: html_document
 ---
 
-
+```{r}
 install.packages("devtools")
 library(devtools)
-install_github("vqv/ggbiplot")
+install_github("vqv/ggbiplot", force=TRUE)
+library(ggbiplot)
 getwd()
-```{r}
 dir <- file.path(getwd(),"Point level data")
 out <- read.csv(file.path(dir, "MU-BU-Ghana.csv"))
 newout <- na.omit(out)
 ```
-
-What is the best way for us to deal with the missing data point? I just omitted the observation. 
-
+ 
+### PCA on Water Variables 
 ```{r1}
 pr.data <- prcomp(x = newout[,57:80], scale = TRUE, center = TRUE)
 summary(pr.data) 
@@ -39,3 +38,26 @@ ggbiplot(pr.data, obs.scale = 1, var.scale = 1,
               circle = TRUE)
 ```
 
+### PCA on LULC Variables without Wetness Index Variables
+
+```{r1}
+lulc.var <- newout[,29:56]
+pr.lulc.data <- prcomp(x = lulc.var, scale = TRUE, center = TRUE)
+summary(pr.lulc.data) 
+pr.var <- pr.lulc.data$sdev^2
+pve <- pr.var/sum(pr.var)
+percent.pve <- pr.var/sum(pr.var) * 100
+barplot(percent.pve, xlab="PC", ylab="Percent Variance", names.arg=1:length(percent.pve), las=1, ylim=c(0,max(percent.pve)), col="gray")
+#Scree Plot
+plot(pve, xlab = "Principal Component",
+             ylab = "Proportion of Variance Explained",
+             type = "b")
+#Cumulative Scree Plot
+plot(cumsum(pve), xlab = "Principal Component",
+              ylab = "Cumulative Proportion of Variance Explained",
+              type = "b")
+biplot(pr.data)
+ggbiplot(pr.data, obs.scale = 1, var.scale = 1,
+              ellipse = TRUE, 
+              circle = TRUE)
+```
