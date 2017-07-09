@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r}
-install.packages("devtools")
+install.packages("devtools", repos = "http://cran.us.r-project.org")
 library(devtools)
 install_github("vqv/ggbiplot", force=TRUE)
 library(ggbiplot)
@@ -23,16 +23,21 @@ summary(pr.data)
 pr.var <- pr.data$sdev^2
 pve <- pr.var/sum(pr.var)
 percent.pve <- pr.var/sum(pr.var) * 100
-barplot(percent.pve, xlab="PC", ylab="Percent Variance", names.arg=1:length(percent.pve), las=1, ylim=c(0,max(percent.pve)), col="gray")
+barplot(percent.pve, xlab="PC",
+            ylab="Percent Variance", 
+            main = "Barplot of Percentage of Total Variation",
+            names.arg=1:length(percent.pve), las=1, 
+            ylim=c(0,max(percent.pve)), col="gray")
 #Scree Plot
 plot(pve, xlab = "Principal Component",
              ylab = "Proportion of Variance Explained",
+             main = "Scree Plot for Water Variables",
              type = "b")
 #Cumulative Scree Plot
 plot(cumsum(pve), xlab = "Principal Component",
               ylab = "Cumulative Proportion of Variance Explained",
+              main = "Cumulative Scree Plot for Water Variables",
               type = "b")
-biplot(pr.data)
 ggbiplot(pr.data, obs.scale = 1, var.scale = 1,
               ellipse = TRUE, 
               circle = TRUE)
@@ -47,17 +52,50 @@ summary(pr.lulc.data)
 pr.var <- pr.lulc.data$sdev^2
 pve <- pr.var/sum(pr.var)
 percent.pve <- pr.var/sum(pr.var) * 100
-barplot(percent.pve, xlab="PC", ylab="Percent Variance", names.arg=1:length(percent.pve), las=1, ylim=c(0,max(percent.pve)), col="gray")
+barplot(percent.pve, xlab="PC", 
+            ylab="Percent Variance", 
+            main = "Barplot of Percentage of Total Variation",
+            names.arg=1:length(percent.pve), las=1, 
+            ylim=c(0,max(percent.pve)), col="gray")
 #Scree Plot
 plot(pve, xlab = "Principal Component",
              ylab = "Proportion of Variance Explained",
+             main = "Scree Plot for LULC Variables (Excluding Wet.Index Variables)",
              type = "b")
 #Cumulative Scree Plot
 plot(cumsum(pve), xlab = "Principal Component",
               ylab = "Cumulative Proportion of Variance Explained",
+              main = "Cumulative Scree Plot for LULC Variables (Excluding Wet.Index Variables)",
               type = "b")
-biplot(pr.lulc.data)
 ggbiplot(pr.lulc.data, obs.scale = 1, var.scale = 1,
+              ellipse = TRUE, 
+              circle = TRUE)
+```
+
+### PCA on LULC Variables with Wetness Index Variables
+```{r3}
+lulc.wet.var <- cbind(newout[,19:26], newout[, 29:56])
+pr.lulc.wet.data <- prcomp(x = lulc.wet.var, scale = TRUE, center = TRUE)
+summary(pr.lulc.wet.data) 
+pr.var <- pr.lulc.wet.data$sdev^2
+pve <- pr.var/sum(pr.var)
+percent.pve <- pr.var/sum(pr.var) * 100
+barplot(percent.pve, xlab="PC",
+            ylab= "Percent Variance", 
+            main = "Barplot of Percentage of Total Variation",
+            names.arg=1:length(percent.pve), las=1, 
+            ylim=c(0,max(percent.pve)), col="gray")
+
+plot(pve, xlab = "Principal Component",
+             ylab = "Proportion of Variance Explained",
+             main = "Scree Plot for LULC Variables (Including Wet.Index Variables)",
+             type = "b")
+
+plot(cumsum(pve), xlab = "Principal Component",
+              ylab = "Cumulative Proportion of Variance Explained", 
+              main = "Cumulative Scree Plot for LULC Variables (Including Wet.Index Variables)",
+              type = "b")
+ggbiplot(pr.lulc.wet.data, obs.scale = 1, var.scale = 1,
               ellipse = TRUE, 
               circle = TRUE)
 ```
