@@ -151,6 +151,18 @@ knn_test$Pclass <- (knn_test$Pclass - min_class) / (max_class - min_class)
     * Y-axis: TPR
     * Interpretation of ROC Curve: The better it is, the closer the line it to the top left corner
     * AUC closer to 1
+* Drawing the curve in R:
+    * library(ROCR)
+    * pred_k <- prediction(probs_k, test$spam)
+    * perf_t <- performance(pred_t, 'tpr', 'fpr')
+    * perf_k <- performance(pred_k, 'tpr', 'fpr')
+    * draw_roc_lines(perf_t, perf_k)
     
-
+#### Regression (Supervised)
+* Adjusted R-squared
+    1. Penalizes more predictors
+    2. Used to compare 
+    * Assumptions Code:
+        1. plot(data$fitted.values, data$residuals)
+        2. qqnorm(data$residuals, ylab='Residual Quantiles')
 

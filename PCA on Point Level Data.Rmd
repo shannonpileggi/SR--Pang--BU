@@ -5,8 +5,12 @@ date: "7/2/2017"
 output: html_document
 ---
 
-```{r}
+
+install.packages("devtools")
+library(devtools)
+install_github("vqv/ggbiplot")
 getwd()
+```{r}
 dir <- file.path(getwd(),"Point level data")
 out <- read.csv(file.path(dir, "MU-BU-Ghana.csv"))
 newout <- na.omit(out)
@@ -15,7 +19,7 @@ newout <- na.omit(out)
 What is the best way for us to deal with the missing data point? I just omitted the observation. 
 
 ```{r1}
-pr.data <- prcomp(x = newout[,29:80], scale = TRUE, center = TRUE)
+pr.data <- prcomp(x = newout[,57:80], scale = TRUE, center = TRUE)
 summary(pr.data) 
 pr.var <- pr.data$sdev^2
 pve <- pr.var/sum(pr.var)
