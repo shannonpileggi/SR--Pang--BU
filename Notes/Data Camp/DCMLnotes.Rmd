@@ -145,5 +145,12 @@ knn_test$Pclass <- (knn_test$Pclass - min_class) / (max_class - min_class)
 * Receiver Operator Characteristic Curve (ROC Curve)
     * True Positive Rate(TPR): TP/(TP+FN)
     * False Positive Rate(FPR): FP/(FP+TN)
+    
+* __ROC Curve__
+    * X-axis: FPR
+    * Y-axis: TPR
+    * Interpretation of ROC Curve: The better it is, the closer the line it to the top left corner
+    * AUC closer to 1
+    
 
 
