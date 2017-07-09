@@ -40,7 +40,7 @@ ggbiplot(pr.data, obs.scale = 1, var.scale = 1,
 
 ### PCA on LULC Variables without Wetness Index Variables
 
-```{r1}
+```{r2}
 lulc.var <- newout[,29:56]
 pr.lulc.data <- prcomp(x = lulc.var, scale = TRUE, center = TRUE)
 summary(pr.lulc.data) 
@@ -56,8 +56,8 @@ plot(pve, xlab = "Principal Component",
 plot(cumsum(pve), xlab = "Principal Component",
               ylab = "Cumulative Proportion of Variance Explained",
               type = "b")
-biplot(pr.data)
-ggbiplot(pr.data, obs.scale = 1, var.scale = 1,
+biplot(pr.lulc.data)
+ggbiplot(pr.lulc.data, obs.scale = 1, var.scale = 1,
               ellipse = TRUE, 
               circle = TRUE)
 ```
