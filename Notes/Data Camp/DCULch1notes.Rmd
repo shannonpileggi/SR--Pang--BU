@@ -45,8 +45,19 @@ output: html_document
 * Will need to run the algorithm many times with different values for ‘centers’ using a for loop and then plotting the total within sum of squares 
 * Look for where the ‘elbow’ occurs, this may not be obvious so it is up to you to choose where you think the ‘elbow’ occurs
 
+wss <- 0
+water <- newout[,57:80]
+# For 1 to 15 cluster centers
+for (i in 1:15) {
+  km.out <- kmeans(water, centers = i, nstart = 20)
+  # Save total within sum of squares to wss variable
+  wss[i] <- km.out$tot.withinss
+}
 
-
+# Plot total within sum of squares vs. number of clusters
+plot(1:15, wss, type = "b", 
+     xlab = "Number of Clusters", 
+     ylab = "Within groups sum of squares")
 
 
 
