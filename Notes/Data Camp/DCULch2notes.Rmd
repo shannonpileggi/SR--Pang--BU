@@ -32,7 +32,7 @@ cutree(hclust.out, k=2)
 ```
 1. _plot(hclust.out)_ to get a Dendrogram chart
 2. Choose your height, and add line with _abline(h=height, col=red)_
-3. Cut three function will specify which distance you want to pick as the cut off for clusters. _cutree(hclust.out, h=height)_ __OR__ _cutree(hclust.out, k=# of clusters)_
+3. Cut tree function will specify which distance you want to pick as the cut off for clusters. _cutree(hclust.out, h=height)_ __OR__ _cutree(hclust.out, k=# of clusters)_
 
 #### Distance between Clusters
 1. __Complete:__ Pairwise Similarity between all observations in cluster 1 and 2, and uses the largest of similarities
