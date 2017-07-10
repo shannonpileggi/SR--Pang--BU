@@ -10,6 +10,8 @@ install.packages("devtools", repos = "http://cran.us.r-project.org")
 library(devtools)
 install_github("vqv/ggbiplot", force=TRUE)
 library(ggbiplot)
+install.packages("FactoMineR", repos = "http://cran.us.r-project.org")
+library(FactoMineR)
 getwd()
 dir <- file.path(getwd(),"Point level data")
 out <- read.csv(file.path(dir, "MU-BU-Ghana.csv"))
@@ -18,29 +20,31 @@ newout <- na.omit(out)
  
 ### PCA on Water Variables 
 ```{r1}
-pr.data <- prcomp(x = newout[,57:80], scale = TRUE, center = TRUE)
+pr.data <- prcomp( newout[,57:80], scale = TRUE, center = TRUE)
 summary(pr.data) 
-pr.var <- pr.data$sdev^2
-pve <- pr.var/sum(pr.var)
-percent.pve <- pr.var/sum(pr.var) * 100
-barplot(percent.pve, xlab="PC",
+pr.water.var <- pr.data$sdev^2
+pve.water <- pr.water.var/sum(pr.water.var)
+percent.pve.water <- pr.water.var/sum(pr.water.var) * 100
+barplot(percent.pve.water, xlab="PC",
             ylab="Percent Variance", 
             main = "Barplot of Percentage of Total Variation",
-            names.arg=1:length(percent.pve), las=1, 
-            ylim=c(0,max(percent.pve)), col="gray")
+            names.arg=1:length(percent.pve.water), las=1, 
+            ylim=c(0,max(percent.pve.water)), col="gray")
 #Scree Plot
-plot(pve, xlab = "Principal Component",
+plot(pve.water, xlab = "Principal Component",
              ylab = "Proportion of Variance Explained",
              main = "Scree Plot for Water Variables",
              type = "b")
 #Cumulative Scree Plot
-plot(cumsum(pve), xlab = "Principal Component",
+plot(cumsum(pve.water), xlab = "Principal Component",
               ylab = "Cumulative Proportion of Variance Explained",
               main = "Cumulative Scree Plot for Water Variables",
               type = "b")
 ggbiplot(pr.data, obs.scale = 1, var.scale = 1,
               ellipse = TRUE, 
               circle = TRUE)
+pr.data <- PCA( newout[,57:80], scale.unit = TRUE, ncp = 6)
+dimdesc(pr.data)
 ```
 
 ### PCA on LULC Variables without Wetness Index Variables
