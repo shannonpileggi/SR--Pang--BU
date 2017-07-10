@@ -114,3 +114,82 @@ pr.data <- PCA(lulc.wet.var, scale.unit = TRUE, ncp = 6)
 dimdesc(pr.data, axes = 1:6)
 ```
 We see a difference with the addition of the wetness index variables. Now, principal component 1, is highly positively associated with the Wetness Index buffer Average at the 1KM and 5KM levels. It is also moderately positively associated with the Shrubland at all levels. It is also moderately negatively associated with Forest at all levels. Much like the analysis above, the second principal component is highly positively associated with the Wetlands variables at all levels and negatively associated with Cropland. The same thing with principal component 3. 
+
+#### k-means algorithm for Water Variables
+
+```{r4}
+# Initialize total within sum of squares error: wss
+wss <- 0
+water <- newout[,57:80]
+# For 1 to 15 cluster centers
+for (i in 1:15) {
+  km.out <- kmeans(water, centers = i, nstart = 20)
+  # Save total within sum of squares to wss variable
+  wss[i] <- km.out$tot.withinss
+}
+
+# Plot total within sum of squares vs. number of clusters
+plot(1:15, wss, type = "b", 
+     xlab = "Number of Clusters", 
+     ylab = "Within groups sum of squares")
+```
+There is no clear "elbow" here, I would choose 5 clusters but it is not clear what number is optimal. 
+
+```{r5}
+km.water.out <- kmeans(x = water, centers = 5, nstart = 20)
+summary(km.water.out)
+print(km.water.out$cluster)
+```
+What should we plot here?
+
+#### k-means algorithm for LULC Variables without Wetness Index Variables
+
+```{r6}
+# Initialize total within sum of squares error: wss
+wss <- 0
+# For 1 to 15 cluster centers
+for (i in 1:15) {
+  km.out <- kmeans(lulc.var, centers = i, nstart = 20)
+  # Save total within sum of squares to wss variable
+  wss[i] <- km.out$tot.withinss
+}
+
+# Plot total within sum of squares vs. number of clusters
+plot(1:15, wss, type = "b", 
+     xlab = "Number of Clusters", 
+     ylab = "Within groups sum of squares")
+```
+For this plot, there is a little bit more of a clear elbow at either 3 or 4 clusters. I will proceed with 3 clusters.  
+
+```{r7}
+km.lulc.out <- kmeans(x = lulc.var, centers = 3, nstart = 20)
+summary(km.lulc.out)
+print(km.lulc.out$cluster)
+```
+What should we plot here?
+
+#### k-means algorithm for LULC Variables with Wetness Index Variables
+
+```{r8}
+# Initialize total within sum of squares error: wss
+wss <- 0
+# For 1 to 15 cluster centers
+for (i in 1:15) {
+  km.lulc.wet.out <- kmeans(lulc.wet.var, centers = i, nstart = 20)
+  # Save total within sum of squares to wss variable
+  wss[i] <- km.out$tot.withinss
+}
+
+# Plot total within sum of squares vs. number of clusters
+plot(1:15, wss, type = "b", 
+     xlab = "Number of Clusters", 
+     ylab = "Within groups sum of squares")
+```
+For this plot, there is a little bit more of a clear elbow at either 3 or 4 clusters. I will proceed with 3 clusters. This is basically the exact same plot as the LULC without including the Wetness Index variables.
+
+```{r9}
+km.lulc.wet.out <- kmeans(x = lulc.wet.var, centers = 3, nstart = 20)
+summary(km.lulc.wet.out)
+print(km.lulc.wet.out$cluster)
+```
+
