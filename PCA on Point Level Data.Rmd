@@ -193,3 +193,8 @@ summary(km.lulc.wet.out)
 print(km.lulc.wet.out$cluster)
 ```
 
+#### Hierarchical Clustering for Water Variables
+```{r10}
+hclust.complete <- hclust(dist(water), method = 'complete')
+plot(hclust.complete, main = 'Complete')
+```
