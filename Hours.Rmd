@@ -24,6 +24,6 @@ Date   | Hours | Time        | Description
 7/8/2017 | 1.5 | 8:45PM-10:15PM | Ran PCA on water, LULC without wetness index variables, and LULC with wetness index variables
 7/9/2017 | 2 | 2:15PM-4:15PM | Read about interpreting PCA output. Watched youtube videos(https://www.youtube.com/watch?v=Uhw-1NilmAk) and read articles. Found the FactoMineR package which has the descdim function which allows you to see how correlated each of the variables are with the principal components. 
 7/9/2017 | 1.5 | 5:30PM-7:00PM | Interpreted the three different analyses using the descdim function to see which variables are the most correlated with the principal components. 
+7/9/2017 | | 8:30PM-10:30PM | Carried out k-means on the three datasets. Started hierarchical clustering. 
 
-
->> __Total Hours: 34.25__
+>> __Total Hours: 36.25__
