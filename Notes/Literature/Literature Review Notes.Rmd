@@ -1,0 +1,22 @@
+---
+title: "Literature Review Notes"
+author: "Corey Pang"
+---
+
+### Spatial Analysis of Anthropogenic Landscape Disturbance and Buruli Ulcer Disease in Benin
+
+__Purpose:__ To quantify the effects of potential anthropogenic landscape disturbances on BU incidence in Benin 
+__Hypotheses:__
+    1. That land cover patches with configurations indicative of anthropogenic landscape disturbances surround villages with higher BU rates in southern Benin 
+    2. That a spatial pattern exists for drivers of BU incidence in Benin 
+
+#### Past BU Studies Findings
+* Identified a correlation between disease incidence and proximity to soild enriched with arsenic in low-lying farmlands
+* Identified a relationship between mean arsenic levels in soil and the spacial distribution of BU cases 
+    * Also between the proximity to gold mining sites and the spacial distribution of cases within the district 
+* BU cases correlated positively with a low to moderate potential for surface runoff and the higher number of cases correlated with lower potential maximum soil water retention values 
+* Found an association between BU incidence and closer proximities to irrigated rice fields and to artificial dams 
+* An association between the construction of a large dam and the geographic expansion of BU cases
+* At a higher risk for BU for closer proximities to the Nyong River, disturbed forrest area, and cultivated wetlands 
+* Lower elevations within drainage basins, with variable wetness patterns, and surrounded by forest had a higher risk for BU
+* Study found an inverse relationship between BU and elevation
