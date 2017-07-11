@@ -166,3 +166,12 @@ knn_test$Pclass <- (knn_test$Pclass - min_class) / (max_class - min_class)
         1. plot(data$fitted.values, data$residuals)
         2. qqnorm(data$residuals, ylab='Residual Quantiles')
 
+#### Hierarchical Clustering
+    1. Simple Linkage: Takes the minimal distance between clusters 
+    2. Complete Linkage: Take the maximum distance between clusters
+    3. Average Linkage: Takes the average distance between clusters
+
+#### Comparing Different Methods
+Which method returns the best separated and the most compact clusters?
+    * Use Dunn's index
+    * Returns the ratio between the minimum intercluster distance to the maximum intracluster diameter
