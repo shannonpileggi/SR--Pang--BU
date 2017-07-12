@@ -32,3 +32,7 @@ output: html_document
     * Do not include those variables 
     * Encode those data features as numerical
     
+Reporting your principal components analysis should have always have at least these three aspects:     1) Using a scree plot to determine the useful number of principal components, and reporting their explained variance 
+    2) Using the loadings to interpret what each of the principal components means in terms of the original variables
+    3) Using the scores to interpret the samples in light of this ordination space that has lower dimensionality than the original data.
+    
