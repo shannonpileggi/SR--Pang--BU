@@ -33,4 +33,4 @@ Date   | Hours | Time        | Description
 7/12/2017 | 1.5 | 10:00AM-11:30AM | Worked on PCA for Point Level Data and continues Data Camp: Writing Functions
 7/12/2017 | 2 | 12:00PM-2:00PM | PCA on Regional Data, Read articles on PCA conducted on non-BU data. 
 7/12/2017 | 1.5 | 2:30PM-4:00PM | Worked on Data Camp: Writing Functions and took notes
->> __Total Hours: 49.5__
+>> __Total Hours: 51__
