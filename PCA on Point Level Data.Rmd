@@ -20,17 +20,37 @@ newout <- na.omit(out)
  
 ### PCA on Water Variables 
 ```{r1}
-pr.data <- prcomp( newout[,57:80], scale = TRUE, center = TRUE)
+water <- newout[,57:80]
+pr.data <- prcomp( water, scale = TRUE, center = TRUE)
 summary(pr.data) 
 pr.water.var <- pr.data$sdev^2
 pve.water <- pr.water.var/sum(pr.water.var)
 percent.pve.water <- pr.water.var/sum(pr.water.var) * 100
+```
+```{r1a}
 barplot(percent.pve.water, xlab="PC",
             ylab="Percent Variance", 
             main = "Barplot of Percentage of Total Variation",
             names.arg=1:length(percent.pve.water), las=1, 
             ylim=c(0,max(percent.pve.water)), col="gray")
+            abline(h=1/ncol(water)*100, col="red")
+```
+The red line on the bar plot indicates the amount of variance each variable would contribute if all contributed the same amount. As we can see from the plot, 7 principal components explain more than one variable’s worth of information. 
 
+```{r1b}
+percent.pve.water[1:7]
+sum(percent.pve.water[1:7])
+```
+
+These 7 principal components account for 79.2% of the variability. 
+
+```{r1b}
+water.loadings <- pr.data$rotation[,1:7]
+sqrt(1/ncol(water))	# cutoff for "important" loadings
+print(water.loadings, digits = 1, cutoff = sqrt(1/ncol(water)), sort = TRUE)
+```
+
+```{r1b}
 plot(pve.water, xlab = "Principal Component",
              ylab = "Proportion of Variance Explained",
              main = "Scree Plot for Water Variables",
