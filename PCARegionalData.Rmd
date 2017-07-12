@@ -6,9 +6,64 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+install.packages("devtools", repos = "http://cran.us.r-project.org")
+library(devtools)
+install_github("vqv/ggbiplot", force=TRUE)
+library(ggbiplot)
 getwd()
 dir <- file.path(getwd(),"Regional data")
 out <- read.csv(file.path(dir, "LandCoverPercentsByDistrict.csv"))
 is.na(out)
 ```
+
+#### PCA on LULC Variables 
+```{r, incluse=FALSE}
+reg.data <- out[,2:11]
+reg.pca <- prcomp(reg.data, scale = TRUE, center = TRUE)
+summary(reg.pca)
+sd <- reg.pca$sdev
+loadings <- reg.pca$rotation
+rownames(loadings) <- colnames(reg.data)
+scores <- reg.pca$x
+```
+
+```{r1}
+var <- sd^2
+var.percent <- var/sum(var) * 100
+barplot(var.percent, xlab="PC", 
+        ylab="Percent Variance", 
+        main = "Barplot of Percentage of Total Variation",
+        names.arg=1:length(var.percent), 
+        las=1, ylim=c(0,max(var.percent)), 
+        col="gray")
+abline(h=1/ncol(reg.data)*100, col="red")
+var.percent[1:4]
+sum(var.percent[1:4])
+```
+There is a big drop in percent variance explained from PC1 to PC2. As we can see from the barplot, 4 principal components explain more than one variable’s worth of information so we will look into these principal components. These 4 components explain 71% of the variation in the data. 
+
+```{r2}
+plot(var.percent, xlab = "Principal Component",
+             ylab = "Proportion of Variance Explained",
+             main = "Scree Plot for LULC Variables",
+             type = "b")
+```
+
+Cutoff for Important Loadings
+```{r3}
+sqrt(1/ncol(reg.data))
+reg.loadings <- reg.pca$rotation[,1:4]
+print(reg.loadings, digits = 2, cutoff = sqrt(1/ncol(water)), sort = TRUE)
+```
+
+The percent of Wetlands and Salt have a moderately positive association with PC1. Cropland has a slightly lower positive association with PC1 than Wetlands and Salt. Urban and Sand barely make the cut off for important loadings, but they have a weak positive association with PC1. Percent Riparian, Urban, and Cloud both have a weakly moderate association with PC2. Sand percentage has a weak negative association with PC2. For PC3, Shrubland has a relatively strong positive association with PC3 and and relatively weak association with Forest. Water percent has a strong negative association with PC4 and a weak to moderate negative association with Riparian. Cropland has a positive weak association with PC4. 
+
+
+
+```{r4}
+print(ggbiplot(reg.pca, scale = 1, obs.scale = TRUE, var.scale = TRUE))
+```
+
+
+
 
