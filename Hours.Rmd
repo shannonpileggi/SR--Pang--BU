@@ -30,5 +30,6 @@ Date   | Hours | Time        | Description
 7/11/2017 | 1 | 11:00AM-12:00PM | Read and took notes on (Campbell 2015 Spatial Analysis Benin)
 7/11/2017 | 2 | 8:30PM-10:30PM | Started Data Camp: Writing Functions
 7/12/2017 | 2.75 | 7:00AM-9:45AM | Researched better ways to visualize PCA and worked on creating a table to display the loadings in a more succinct way. 
+7/12/2017 | 1.5 | Worked on PCA for Point Level Data and continues Data Camp: Writing Functions
 
->> __Total Hours: 45__
+>> __Total Hours: 46.5__
