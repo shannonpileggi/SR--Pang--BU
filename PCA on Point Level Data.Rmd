@@ -44,13 +44,13 @@ sum(percent.pve.water[1:7])
 
 These 7 principal components account for 79.2% of the variability. 
 
-```{r1b}
+```{r1c}
 water.loadings <- pr.data$rotation[,1:7]
 sqrt(1/ncol(water))	# cutoff for "important" loadings
 print(water.loadings, digits = 1, cutoff = sqrt(1/ncol(water)), sort = TRUE)
 ```
 
-```{r1b}
+```{r1d}
 plot(pve.water, xlab = "Principal Component",
              ylab = "Proportion of Variance Explained",
              main = "Scree Plot for Water Variables",
@@ -63,7 +63,7 @@ plot(cumsum(pve.water), xlab = "Principal Component",
               type = "b")
 
 scores <- pr.data$x
-biplot(scores[,1:7], loadings[,1:7], cex=0.7, )
+#biplot(scores[,1:7], loadings[,1:7], cex=0.7, )
 ggbiplot(pr.data, obs.scale = 1, var.scale = 1,
               ellipse = TRUE, 
               circle = TRUE)
