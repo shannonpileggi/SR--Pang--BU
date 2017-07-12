@@ -1,0 +1,30 @@
+---
+title: 'DC: Writing Functions'
+author: "Corey Pang"
+date: "7/11/2017"
+output: html_document
+---
+
+### Functions
+    * There are 3 parts to a function
+        1. Arguments
+        2. Body
+        3. Environment
+    
+* Scoping is the process R uses to look up values
+* If the name is not defined locally then it looks one environment up, if nothing is defined it will return an error
+
+* There are two types of vectors in R
+    1. Atomic
+    2. Lists 
+    * Every vector has 2 key properties
+        1. lengthof(x)
+        2. typeof(x)
+        
+#### When to write a function?
+* Once you've copied and pasted twice, it's time to write a function
+
+
+
+
+
