@@ -1,0 +1,14 @@
+---
+title: "PCA on Regional Data"
+author: "Corey Pang"
+date: "7/12/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+getwd()
+dir <- file.path(getwd(),"Regional data")
+out <- read.csv(file.path(dir, "LandCoverPercentsByDistrict.csv"))
+is.na(out)
+```
+
