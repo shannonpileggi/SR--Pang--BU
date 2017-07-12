@@ -27,5 +27,7 @@ Date   | Hours | Time        | Description
 7/9/2017 | 2 | 8:30PM-10:30PM | Carried out k-means on the three datasets. Started hierarchical clustering. 
 7/10/2017 | 1 | 2:00PM-3:00PM | Finished Data Camp Machine Learning
 7/10/2017 | 1 | 10:00PM-11:00PM | Read some literature (Campbell 2015 Spatial Analysis Benin)
-7/11/2017 | 
->> __Total Hours: 40.25__
+7/11/2017 | 1 | 11:00AM-12:00PM | Read and took notes on (Campbell 2015 Spatial Analysis Benin)
+7/11/2017 | 1 | 8:30PM-9:30PM | Started Data Camp: Writing Functions
+
+>> __Total Hours: 42.25__
