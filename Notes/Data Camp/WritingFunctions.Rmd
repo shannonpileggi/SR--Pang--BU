@@ -72,9 +72,28 @@ Advantages:
 3. Takes much less time to solve iteration Problems
 
 ##### Load the purrr package
-library(purrr)
+* library(purrr)
 ##### Use map_dbl() to find column means
-map_dbl(df, mean)
+* map_dbl(df, mean)
+##### Find the mean of each column, excluding missing values
+* map_dbl(planes, mean, na.rm=TRUE)
+##### Find the 5th percentile of each column, excluding missing values
+* map_dbl(planes, quantile, probs = 0.05, na.rm=TRUE)
 
+The pipe operator: 
+* %>%
+* x %>% y means f(x,y)
+* we can chain together many operations using the pipe
 
+Adverbs:
+* safely(): captures the successful result or the error, always returns a list
+* possibly(): always succeeds, you give it a default value to return when there is an error
+* quietly(): captures printed output, messages, and warnings instead of capturing errors
+
+#### Using map2
+* use map2() to iterate over two arguments
+* use pmap() to iterate over many arguments 
+    * pmap(.l, .f, ...)
+* invoke_map() to iterate over functions
+    * invoke_map(.f, .x = list(NULL, ...))
 
