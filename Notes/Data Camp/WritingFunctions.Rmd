@@ -57,7 +57,24 @@ col_sd <- function(df) {
   output
 }
 
+--------------------------------------------------------
 
+#### Passing Functions as Arguments
+* prrr package
+    * map_dbl,chr,...(.x, .f, ...)
+1. The map function loops over a vector .x
+2. Doing .f to each element
+3. Returns the Results 
+
+Advantages:
+1. Handy shortcuts for calling .f
+2. More consistent than lapply() and sapply()
+3. Takes much less time to solve iteration Problems
+
+##### Load the purrr package
+library(purrr)
+##### Use map_dbl() to find column means
+map_dbl(df, mean)
 
 
 
