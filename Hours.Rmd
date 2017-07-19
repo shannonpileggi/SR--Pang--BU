@@ -34,4 +34,9 @@ Date   | Hours | Time        | Description
 7/12/2017 | 2 | 12:00PM-2:00PM | PCA on Regional Data, Read articles on PCA conducted on non-BU data. 
 7/12/2017 | 1.5 | 2:30PM-4:00PM | Worked on Data Camp: Writing Functions and took notes
 7/12/2017 | 1 | 10:15PM-11:15PM | Worked on Data Camp: Writing Functions and took notes
->> __Total Hours: 52__
+7/16/2017 | 2.5 | 8:00AM-10:30AM | Read articles on PCA in Buruli Ulcer 
+7/17/2017 | 2 | 2:30PM-4:30PM | Worked on Data Camp: Writing functions, looked at ways to viasualize PCA analysis. 
+7/17/2017 | 8:30PM-10:30PM | Read literature on PCA.
+7/18/2017 | 8:30PM-10:30PM | Finished Data Camp for Writing Functions.
+
+>> __Total Hours: 56.5__

@@ -97,3 +97,14 @@ Adverbs:
 * invoke_map() to iterate over functions
     * invoke_map(.f, .x = list(NULL, ...))
 
+#### Maps with Side Effects 
+* __Side Effects:__ Describe things that happen beyond the results of a function
+    * Examples: Printing output, plotting, and saving files to disk
+    * walk() operates just like map() except it's designed for functions that don't return anything
+    
+### Robust Functions
+* Three main problems
+    1. Type-Unstable Functions
+    2. Non-standard evaluation
+    3. Hidden Arguments
+    
