@@ -1,0 +1,44 @@
+---
+title: 'Data Camp: ggplot2 notes'
+author: "Corey Pang"
+date: "7/20/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+```
+
+* ggplot(mtcars, aes(x = wt, y = mpg, size = , color = __)) +
+  geom_point() +
+  geom_smooth(alpha = )
+      * geom_point: plots the points
+      * geom_smooth: plots the line 
+          * color separates data by color
+          * alpha transparency of points(0 to 1)
+  
+### ggplot2 Layers 
+1. Data
+2. Aesthetics 
+3. Geometries 
+4. Facets
+5. Coordinates
+6. Theme
+
+* You can create the object containing the data and aes layers: dia_plot
+    * dia_plot <- ggplot(diamonds, aes(x = carat, y = price))
+* Then add a geom layer with + and geom_point()
+    * dia_plot + geom_point()
+* And add the same geom layer, but with aes() inside
+    * dia_plot + geom_point(aes(color = clarity))
+    
+#### Objects and Layers
+* Adding linear models by each cylinder and also an overal linear model for all the data
+    * ggplot(mtcars, aes(x = wt, y = mpg, col = cyl)) +
+    * geom_point() + 
+    * geom_smooth(method = 'lm', se = FALSE) +
+    * geom_smooth(aes(group = 1), method = 'lm', se = FALSE, linetype = 2)
+
+* Ggplots always want one measurement per row of the data frame.
+  
+
