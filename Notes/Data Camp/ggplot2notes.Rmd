@@ -40,5 +40,20 @@ library(ggplot2)
     * geom_smooth(aes(group = 1), method = 'lm', se = FALSE, linetype = 2)
 
 * Ggplots always want one measurement per row of the data frame.
-  
+ 
+* To get this, we need the tidyr library 
+* library(tidyr)
+* iris.tidy <- iris %>%
+    * gather(key, Value, - Species) %>%
+    * separate(key, c("Part", "Measure"), "\\.")
+    
+#### Which Aesthetic to use?
+* Accurately display the data (don't need to make it pretty)
+* Think of the intended audience
+* To adjust the points(make hollow, transparent, different shapes, etc.): change in geom_points()
+
+* gather() takes four arguments: the original data frame (fish.species), the name of the key column (Species), the name of the value column (Capture) and the name of the grouping variable, with a minus in front (-Year). They can all be specified as object names
+
+
+
 
