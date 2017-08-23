@@ -10,10 +10,21 @@ install.packages("devtools", repos = "http://cran.us.r-project.org")
 library(devtools)
 install_github("vqv/ggbiplot", force=TRUE)
 library(ggbiplot)
+library(foreign)
+library(shapefiles)
+library(reshape2)
+library(psych)
 getwd()
 dir <- file.path(getwd(),"Regional data")
 out <- read.csv(file.path(dir, "LandCoverPercentsByDistrict.csv"))
-is.na(out)
+populations <- read.csv(file.path(dir,"finalDistrictPop.csv"))
+healthCenter = read.dbf(file.path(dir,"healthCenterCountsByDistrict.dbf"))
+healthCenterup = data.frame(ADM2 = healthCenter$dbf$ADM2, hcCount= healthCenter$dbf$Count_)
+hospital = read.dbf(file.path(dir,"HospitalCountsByDistrict.dbf"))
+hospitalup = data.frame(ADM2 = hospital$dbf$ADM2, hospCount= hospital$dbf$Count_)
+dataHealth = merge(healthCenterup, hospitalup, by = 'ADM2')
+updated = merge(dataHealth, out, by='ADM2')
+updated = merge(updated, populations, by = 'ADM2')
 ```
 
 #### PCA on LULC Variables 
@@ -23,6 +34,7 @@ reg.pca <- prcomp(reg.data, scale = TRUE, center = TRUE)
 summary(reg.pca)
 sd <- reg.pca$sdev
 loadings <- reg.pca$rotation
+fa.sort(loadings)
 rownames(loadings) <- colnames(reg.data)
 scores <- reg.pca$x
 ```
@@ -61,9 +73,24 @@ The percent of Wetlands and Salt have a moderately positive association with PC1
 
 
 ```{r4}
-print(ggbiplot(reg.pca, scale = 1, obs.scale = TRUE, var.scale = TRUE))
+# Changed data into one column of values to use for ggplot2
+
+loadings.m <- melt(loadings, id="ID", 
+                   measure=c("PC1", "PC2", 
+                             "PC3", "PC4"), 
+                   variable.name="Factor", value.name="Loading")
+ggplot(loadings.m, aes(x = ID, y = Loading, fill=Loading)) + 
+  facet_wrap(~ Factor, nrow = 1) +
+  geom_bar(stat="identity")
 ```
 
+str(reg.loadings)
+summary(loadings)
+id <- seq(1,10,1)
+cbind(loadings, id)
+Ord <- c(1, 2, 4, 3, 5, 6, 7, 8, 10, 9)
+loadings$id <- reorder(loadings$id, Ord) 
+loadings <- data.frame(ID = rownames(reg.pca$rotation), reg.pca$rotation[,1:4], stringsAsFactors=F)
+loadings <- loadings[order(loadings$PC1, decreasing = F),]
 
-
-
+ggplot(loadings$PC1, aes(x = ID, y = PC1, decreasing=T))
