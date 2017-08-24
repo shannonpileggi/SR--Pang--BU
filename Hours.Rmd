@@ -38,6 +38,14 @@ Date   | Hours | Time        | Description
 7/17/2017 | 2 | 2:30PM-4:30PM | Worked on Data Camp: Writing functions, looked at ways to viasualize PCA analysis. 
 7/17/2017 | 2 | 8:30PM-10:30PM | Read literature on PCA.
 7/18/2017 | 2 | 8:30PM-10:30PM | Finished Data Camp for Writing Functions.
-7/19/2017 | 2 | 12:00PM-2:00PM | 
-
->> __Total Hours: 61.5__
+7/19/2017 | 2 | 12:00PM-2:00PM | Read Literature and took notes. 
+7/25/2017 | 3.5 | 10:00AM-1:30PM | Read literature that used PCA on BU and worked on PCA for Regional Data. Worked on coming up with a visual display for the results of PCA. 
+7/26/2017 | 3 | 8:30AM - 11:30AM | Looked for PCA analyses and read literature for modeling. 
+8/18/2017 | 4.5 | 8:00AM - 12:30PM | Worked on Data Camp ggplot2 and took notes. Worked on merging data sets. 
+8/19/2017 | 3.5 | 4:00PM - 7:30PM | Worked on Data Camp ggplot2 and took notes. Look at literature of other PCA analyses.  
+8/20/2017 | 4.5 | 7:00AM - 10:30AM | Finished Data Camp ggplot2 and took notes. Read literature and took notes. 
+8/21/2017 | 3.5 | 7:00PM - 10:30PM | Started looking up visuals. Merged data sets to include number of reported cases for regional data. 
+8/22/2017 | 7.25 | 3:00PM - 6:45PM and 8:00PM - 11:30PM | Worked on visual. Got to plot the loadings by each variable and facet by PC. Researched how to order the values, change axis, color code)
+8/23/2017 | 8:00AM - 10:15AM | Continued working on the visual. 
+8/24/2017 | 8:00AM - 12:00PM | Worked on visual and read literature.
+>> __Total Hours: 99.5__
