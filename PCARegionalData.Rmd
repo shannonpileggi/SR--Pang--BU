@@ -74,32 +74,22 @@ The percent of Wetlands and Salt have a moderately positive association with PC1
 
 ```{r4}
 # Changed data into one column of values to use for ggplot2
-Ord <- c(1, 2, 3, 4, 5, 6, 7, 8, 10, 9)
-loadings$ID <- reorder(loadings$ID, Ord) 
-loadings$ID <- reorder(loadings$ID, Ord)
+#Ord <- c(1, 2, 3, 4, 5, 6, 7, 8, 10, 9)
+#loadings$ID <- reorder(loadings$ID, Ord) 
+#loadings$ID <- reorder(loadings$ID, Ord)
+
 loadings <- data.frame(ID = rownames(reg.pca$rotation), reg.pca$rotation[,1:4], stringsAsFactors=F)
 
 loadings.m <- melt(loadings, id="ID", 
                    measure=c("PC1", "PC2", 
                              "PC3", "PC4"), 
                    variable.name="Factor", value.name="Loading")
-num <- (1:40)
-loadings.m <- cbind(loadings.m, num)
-
 loadings.m <- with(loadings.m, loadings.m[order(loadings.m$Factor, loadings.m$Loading),])    
-loadings.m
 ggplot(loadings.m, aes(x = ID, y = Loading)) + 
   facet_wrap(~ Factor, nrow = 1) +
   geom_bar(stat="identity") +
-  theme(axis.text.x = element_text(angle = 60, hjust = 1))
+  theme(axis.text.x = element_text(angle = 60, hjust = 1)) +
+  ggtitle('PCA on Regional Data')
 ```
 
-str(reg.loadings)
-summary(loadings)
-id <- seq(1,10,1)
-cbind(loadings, id)
-Ord <- c(1, 2, 4, 3, 5, 6, 7, 8, 10, 9)
-loadings$id <- reorder(loadings$id, Ord) 
-
-str(loadings.m)
 
