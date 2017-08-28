@@ -48,4 +48,7 @@ Date   | Hours | Time        | Description
 8/22/2017 | 7.25 | 3:00PM - 6:45PM and 8:00PM - 11:30PM | Worked on visual. Got to plot the loadings by each variable and facet by PC. Researched how to order the values, change axis, color code)
 8/23/2017 | 8:00AM - 10:15AM | Continued working on the visual. 
 8/24/2017 | 8:00AM - 12:00PM | Worked on visual and read literature.
->> __Total Hours: 99.5__
+8/25/2017 | 9:00AM - 12:00PM | Worked on visual and read literature.
+8/27/2017 | 8:00AM - 11:00AM | Worked on visual and read literature.
+
+>> __Total Hours: 105.5__
